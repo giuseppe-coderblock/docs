@@ -1,0 +1,185 @@
+# VibeCoding Platform Documentation
+
+## 🚀 Overview
+
+**VibeCoding** è una piattaforma che combina **Intelligenza Artificiale sensoriale** e **tecnologie immersive** per trasformare emozioni, frequenze e sensazioni in esperienze digitali reattive.  
+La piattaforma consente di tradurre vibrazioni emotive in output visivi, sonori e tattili, creando un linguaggio digitale basato sul "vibe".
+
+---
+
+## 🧩 Core Concept
+
+### 🎧 Cos’è il VibeCoding
+Il VibeCoding è la disciplina che permette di **codificare e decodificare emozioni**, traducendole in segnali interpretabili dalle macchine (AI) e dagli ambienti digitali (VR/AR/XR).
+
+Attraverso un sistema di **AI multimodale** e **sensor fusion**, la piattaforma:
+- Analizza parametri emozionali (biofeedback, tono vocale, espressione facciale)
+- Genera risposte immersive (suono, luce, vibrazione, colore)
+- Crea un **ciclo di interazione emotiva** continuo (emotional loop)
+
+---
+
+## 🧠 Architecture
+
+### 1. Data Layer
+Raccoglie e gestisce dati provenienti da:
+- Sensori biometrici (battito, EEG, temperatura)
+- Input audio-visivi
+- Interazioni dell’utente in ambienti immersivi
+
+### 2. AI Processing Layer
+Gestisce l’elaborazione tramite:
+- **Emotion Recognition AI**
+- **Affective Computing**
+- **RAG (Retrieval-Augmented Generation)** per arricchire le risposte emotive con conoscenze contestuali
+- **Embedding Engine** per la mappatura semantica dei “vibe”
+
+### 3. Experience Layer
+Traduzione dei dati emozionali in output multisensoriali:
+- **Generative Sound Engine** (musica e soundscape adattivi)
+- **Neural Rendering Engine** (ambiente visivo adattivo)
+- **Haptic System** (vibrazione e risposta tattile)
+- **Vibe Mapping API** per interfacce di terze parti
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Installazione SDK
+
+```bash
+npm install vibecoding-sdk
+```
+
+oppure
+
+```bash
+pip install vibecoding
+```
+
+### 2. Autenticazione
+
+Crea un token di accesso dal tuo [VibeCoding Dashboard](https://vibecoding.ai/dashboard)
+
+```javascript
+import { VibeClient } from "vibecoding-sdk";
+
+const client = new VibeClient({
+  apiKey: process.env.VIBECODING_API_KEY
+});
+```
+
+### 3. Prima chiamata API
+
+```javascript
+const vibe = await client.createVibe({
+  emotion: "calm",
+  intensity: 0.7,
+  output: ["sound", "light"]
+});
+
+console.log(vibe.output);
+```
+
+---
+
+## 🧬 API Reference
+
+### `POST /v1/vibe/create`
+Crea una nuova sessione di VibeCoding basata su parametri emozionali.
+
+| Parametro | Tipo | Descrizione |
+|------------|------|-------------|
+| `emotion` | string | Emozione base (“joy”, “focus”, “calm”, “fear”, ecc.) |
+| `intensity` | float | Intensità dell’emozione da 0 a 1 |
+| `output` | array | Tipologia di risposta desiderata: ["sound", "light", "vibration"] |
+
+**Esempio risposta:**
+```json
+{
+  "status": "success",
+  "session_id": "vibe_92d4x1",
+  "generated_output": {
+    "sound": "ambient_focus_01.wav",
+    "color": "#4FD1C5"
+  }
+}
+```
+
+---
+
+### `GET /v1/vibe/status/{session_id}`
+Restituisce lo stato della sessione in corso.
+
+```json
+{
+  "session_id": "vibe_92d4x1",
+  "status": "active",
+  "emotion_detected": "focus"
+}
+```
+
+---
+
+## 🎨 Vibe Mapping
+
+### Descrizione
+Il **Vibe Mapping** è il cuore del sistema: una mappa multidimensionale che rappresenta le emozioni in coordinate di frequenza, colore, temperatura e ritmo.
+
+| Emozione | Colore | Frequenza (Hz) | Pattern Vibrazione |
+|-----------|---------|----------------|--------------------|
+| Joy | #FFD93D | 432 Hz | Ripple |
+| Calm | #4FD1C5 | 396 Hz | Smooth |
+| Focus | #3B82F6 | 528 Hz | Pulse |
+| Fear | #A855F7 | 666 Hz | Sharp |
+
+---
+
+## 🔌 Integrations
+
+- **Unity SDK** per esperienze VR/AR immersive  
+- **TouchDesigner Plugin** per sound e visual generativi  
+- **OpenAI Integration (RAG Layer)** per risposte emozionali contestuali  
+- **OSC / MIDI Bridge** per output sonori e fisici  
+
+---
+
+## 💡 Use Cases
+
+### 🎓 Formazione e Training
+Simulazioni immersive che si adattano allo stato emotivo dell’utente per aumentare focus e coinvolgimento.
+
+### 🧘‍♀️ Wellness e Meditazione
+Esperienze sensoriali adattive che bilanciano frequenze, suoni e luci in base al respiro o al battito cardiaco.
+
+### 🎭 Arte e Performance
+Installazioni interattive che reagiscono alle emozioni del pubblico in tempo reale.
+
+---
+
+## 🧩 Glossary
+
+| Termine | Definizione |
+|----------|-------------|
+| **Affective Computing** | Ramo dell’AI che riconosce e genera emozioni |
+| **RAG** | Retrieval-Augmented Generation, per risposte AI arricchite da fonti esterne |
+| **Vibe Mapping** | Codifica delle emozioni in pattern digitali (suono, colore, vibrazione) |
+| **Embodied Intelligence** | Interazione fisica e percettiva tra AI e corpo umano |
+| **Digital Vibration** | Comunicazione di emozioni tramite frequenze o feedback sensoriali |
+
+---
+
+## 📚 Resources
+
+- [Mintlify Docs](https://mintlify.com/docs)
+- [OpenAI API](https://platform.openai.com/docs)
+- [TouchDesigner Network](https://derivative.ca)
+- [Unity XR Toolkit](https://docs.unity3d.com/Manual/XR.html)
+
+---
+
+## 🧑‍💻 Authors
+
+Documentazione creata da **Giuseppe [tuo cognome]**  
+Business Developer e Innovation Evangelist @ Coderblock  
+Specializzato in tecnologie immersive e AI sensoriale
