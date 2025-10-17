@@ -11,15 +11,23 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Getting started",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Introduction",
             "pages": [
               "index",
               "quickstart",
               "development",
               "test-sara"
+            ]
+          },
+           {
+            "group": "First Steps",
+            "pages": [
+              "create-first-project",
+              "understanding-workspace",
+              "editing-and-iterating"
             ]
           },
           {
